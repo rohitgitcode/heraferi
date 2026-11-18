@@ -1,0 +1,52 @@
+/* ==========================================================================
+   HeraPheri Club — Design System Tokens
+   Aesthetic: Vintage Mumbai Members' Club & High-Stakes Felt Table
+   ========================================================================== */
+
+:root {
+  /* Core Surfaces */
+  --bg-canvas: #0f1115;
+  --bg-surface: #171a21;
+  --bg-elevated: #20242e;
+  --bg-felt: #132a1e;
+  --bg-felt-border: #234935;
+
+  /* Brand & Accent Colors */
+  --accent-brass: #d4af37;
+  --accent-brass-hover: #e5c158;
+  --accent-brass-muted: rgba(212, 175, 55, 0.14);
+
+  /* Semantic Status Colors */
+  --status-jackpot: #2ecc71;
+  --status-jackpot-bg: rgba(46, 204, 113, 0.12);
+  --status-bomb: #e74c3c;
+  --status-bomb-bg: rgba(231, 76, 60, 0.14);
+  --status-warning: #f39c12;
+
+  /* Typography Colors */
+  --text-primary: #f4f1ea;
+  --text-secondary: #a3a8b5;
+  --text-muted: #6c7280;
+  --text-inverse: #0f1115;
+
+  /* Borders & Shadows */
+  --border-subtle: #282d39;
+  --border-strong: #3a4152;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-tactile: 0 4px 0 #8f7219;
+
+  /* Typography Families */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing & Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Layout Dimensions */
+  --header-height: 64px;
+  --chat-sidebar-width: 340px;
+}
