@@ -19,9 +19,18 @@ const BOX_POOL = [
   { id: 's3', title: 'Nazar Lag Gayi', type: 'halve', value: 0, description: 'Buri nazar! Aapke wallet ka 25% paisa ud gaya.' }
 ];
 
+function shuffle(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 function getRandomBoxes(count = 1) {
-  const shuffled = [...BOX_POOL].sort(() => 0.5 - Math.random());
+  const shuffled = shuffle(BOX_POOL);
   return shuffled.slice(0, count);
 }
 
-module.exports = { BOX_POOL, getRandomBoxes };
+module.exports = { BOX_POOL, getRandomBoxes, shuffle };

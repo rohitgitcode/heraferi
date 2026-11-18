@@ -31,6 +31,16 @@ class RoomService {
     };
 
     rooms.set(roomCode, room);
+
+    // REST API se bane hue rooms agar 10 minute tak join na hon toh memory leak se bachane ke liye auto-clean
+    setTimeout(() => {
+      const existing = rooms.get(roomCode);
+      if (existing && existing.players.length === 0) {
+        if (existing.timerInterval) clearInterval(existing.timerInterval);
+        rooms.delete(roomCode);
+      }
+    }, 10 * 60 * 1000);
+
     return room;
   }
 
